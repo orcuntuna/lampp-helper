@@ -13,7 +13,7 @@ Follow on terminal:
     sudo chmod +x xampp
 
 **Notice:** edit your downloaded file address by yourself
-**Info:** this script need python3
+**Info:** this script need python3 and lampp
 **Info:** you don't need xampp.py file, can remove it. we dont use this file, it for github.
 
 
