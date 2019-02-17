@@ -33,9 +33,10 @@ if(argumanlar > 1):
             print("GUI uygulamasina ulasilamiyor")
     elif(komut == "--help"):
         print("""
-        -start  :   servisleri aktiflestirir
-        -stop   :   servisleri durdurur
-        -gui    :   gui uygulamasini calistirir
+        cd $(xampp)   :   htdocs klasorune git
+        xampp -start  :   servisleri aktiflestirir
+        xampp -stop   :   servisleri durdurur
+        xampp -gui    :   gui uygulamasini calistirir
         """) #help
     else:
         print("hatali parametre")
