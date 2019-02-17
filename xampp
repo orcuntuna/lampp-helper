@@ -8,7 +8,6 @@ import os
 import os.path
 import sys
 
-
 lampp_adres = "/opt/lampp/"
 
 argumanlar = len(sys.argv)
