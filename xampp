@@ -6,6 +6,8 @@
 import sys
 import os
 import os.path
+import sys
+
 
 lampp_adres = "/opt/lampp/"
 
@@ -19,8 +21,6 @@ if(argumanlar > 1):
         os.system("sudo " + lampp_adres + "lampp start") #start
     elif(komut == "stop"):
         os.system("sudo " + lampp_adres + "lampp stop") #stop
-    elif(komut == "htdocs"):
-        print("htdocs")
     elif(komut == "gui"):
         dosya1 = lampp_adres + "manager-linux-x64.run" #64 bit
         dosya2 = lampp_adres + "manager-linux.run" #32 bit
@@ -41,4 +41,4 @@ if(argumanlar > 1):
     else:
         print("hatali parametre")
 else:
-    print("Parametre gonderilmedi")
+    print(lampp_adres + "htdocs/")
