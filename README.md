@@ -9,7 +9,8 @@ open, stop and open with one command for linux lampp
 
 Follow on terminal:
 
-    sudo cp ~/Downloads/lampp-helper/xampp /usr/local/bin/
+    cd /usr/local/bin/
+    sudo cp ~/Downloads/lampp-helper/xampp .
     sudo chmod +x xampp
 
 **Notice:** edit your downloaded file address by yourself
