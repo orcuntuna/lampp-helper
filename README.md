@@ -4,7 +4,7 @@ open, stop and open with one command for linux lampp
 
 ## How to install?
 1. Download xampp file on this repository
-2. Copy xampp file to /usr/local/bin
+2. Copy xampp file to /usr/local/bin (for path)
 3. Give permission for run (+x)
 
 Follow on terminal:
