@@ -8,7 +8,7 @@ import os
 import os.path
 import sys
 
-lampp_adres = "/opt/lampp/"
+lampp_path = "/opt/lampp/"
 
 argumanlar = len(sys.argv)
 
@@ -17,12 +17,12 @@ if(argumanlar > 1):
     komut = sys.argv[1]
 
     if(komut == "start"):
-        os.system("sudo " + lampp_adres + "lampp start") #start
+        os.system("sudo " + lampp_path + "lampp start") #start
     elif(komut == "stop"):
-        os.system("sudo " + lampp_adres + "lampp stop") #stop
+        os.system("sudo " + lampp_path + "lampp stop") #stop
     elif(komut == "gui"):
-        dosya1 = lampp_adres + "manager-linux-x64.run" #64 bit
-        dosya2 = lampp_adres + "manager-linux.run" #32 bit
+        dosya1 = lampp_path + "manager-linux-x64.run" #64 bit
+        dosya2 = lampp_path + "manager-linux.run" #32 bit
         if(os.path.isfile(dosya1)):
             os.system("sudo chmod +x " + dosya1) #64 bit chmod
             os.system("sudo " + dosya1) #64 bit open
@@ -30,14 +30,15 @@ if(argumanlar > 1):
             os.system("sudo chmod +x " + dosya2) #32 bit chmod
             os.system("sudo " + dosya2) #32 bit open
         else:
-            print("GUI uygulamasina ulasilamiyor")
+            print("GUI can't found")
     elif(komut == "--help"):
         print("""
-        -start  :   servisleri aktiflestirir
-        -stop   :   servisleri durdurur
-        -gui    :   gui uygulamasini calistirir
+        cd $(xampp)  :   jump lampp htdocs directory
+        xampp start  :   start all services
+        xampp stop   :   stop all services
+        xampp gui    :   run lampp gui application
         """) #help
     else:
-        print("hatali parametre")
+        print("wrong parameter")
 else:
-    print(lampp_adres + "htdocs/")
+    print(lampp_path + "htdocs/")
