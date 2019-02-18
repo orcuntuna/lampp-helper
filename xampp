@@ -10,9 +10,9 @@ import sys
 
 lampp_path = "/opt/lampp/"
 
-argumanlar = len(sys.argv)
+args = len(sys.argv)
 
-if(argumanlar > 1):
+if(args > 1):
 
     komut = sys.argv[1]
 
