@@ -5,7 +5,6 @@
 
 import sys
 import os
-import os.directory
 import sys
 
 lampp_directory = "/opt/lampp/"
@@ -23,12 +22,12 @@ if(args > 1):
     command = sys.argv[1]
 
     if(command == "start"):
-        os.system("sudo " + lampp_directory + docs_directory"lampp start") #start
+        os.system("sudo " + lampp_directory + "lampp start") #start
     elif(command == "stop"):
         os.system("sudo " + lampp_directory + "lampp stop") #stop
     elif(command == "restart"):
         os.system("sudo " + lampp_directory + "lampp stop") #stop
-        os.system("sudo " + lampp_directory + docs_directory"lampp start") #start
+        os.system("sudo " + lampp_directory + "lampp start") #start
     elif(command == "gui"):
         dosya1 = lampp_directory + "manager-linux-x64.run" #64 bit
         dosya2 = lampp_directory + "manager-linux.run" #32 bit
