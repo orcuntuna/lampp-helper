@@ -16,11 +16,13 @@ Follow on terminal:
 **Notice:** edit your downloaded file address by yourself
 **Info:** this script need python3 and lampp
 
+If using custom htdocs folder, you can edit custom_htdocs_directory varible
 
 ## How to use?
 
     cd $(xampp)
     xampp start
     xampp stop
+    xampp restart
     xampp gui
     xampp --help

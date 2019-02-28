@@ -5,40 +5,50 @@
 
 import sys
 import os
-import os.path
+import os.directory
 import sys
 
-lampp_path = "/opt/lampp/"
+lampp_directory = "/opt/lampp/"
+custom_htdocs_directory = ""
+
+if custom_htdocs_directory:
+    htdocs_directory = custom_htdocs_directory
+else:
+    htdocs_directory = lampp_directory + "htdocs/"
 
 args = len(sys.argv)
 
 if(args > 1):
 
-    komut = sys.argv[1]
+    command = sys.argv[1]
 
-    if(komut == "start"):
-        os.system("sudo " + lampp_path + "lampp start") #start
-    elif(komut == "stop"):
-        os.system("sudo " + lampp_path + "lampp stop") #stop
-    elif(komut == "gui"):
-        dosya1 = lampp_path + "manager-linux-x64.run" #64 bit
-        dosya2 = lampp_path + "manager-linux.run" #32 bit
-        if(os.path.isfile(dosya1)):
+    if(command == "start"):
+        os.system("sudo " + lampp_directory + docs_directory"lampp start") #start
+    elif(command == "stop"):
+        os.system("sudo " + lampp_directory + "lampp stop") #stop
+    elif(command == "restart"):
+        os.system("sudo " + lampp_directory + "lampp stop") #stop
+        os.system("sudo " + lampp_directory + docs_directory"lampp start") #start
+    elif(command == "gui"):
+        dosya1 = lampp_directory + "manager-linux-x64.run" #64 bit
+        dosya2 = lampp_directory + "manager-linux.run" #32 bit
+        if(os.directory.isfile(dosya1)):
             os.system("sudo chmod +x " + dosya1) #64 bit chmod
             os.system("sudo " + dosya1) #64 bit open
-        elif(os.path.isfile(dosya2)):
+        elif(os.directory.isfile(dosya2)):
             os.system("sudo chmod +x " + dosya2) #32 bit chmod
             os.system("sudo " + dosya2) #32 bit open
         else:
             print("GUI can't found")
-    elif(komut == "--help"):
+    elif(command == "--help"):
         print("""
-        cd $(xampp)  :   jump lampp htdocs directory
-        xampp start  :   start all services
-        xampp stop   :   stop all services
-        xampp gui    :   run lampp gui application
+        cd $(xampp)     :   jump lampp htdocs directory
+        xampp start     :   start all services
+        xampp stop      :   stop all services
+        xampp restart   :   restart all services
+        xampp gui       :   run lampp gui application
         """) #help
     else:
         print("wrong parameter")
 else:
-    print(lampp_path + "htdocs/")
+    print(htdocs_directory)
