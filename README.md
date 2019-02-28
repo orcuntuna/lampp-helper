@@ -16,7 +16,7 @@ Follow on terminal:
 **Notice:** edit your downloaded file address by yourself
 **Info:** this script need python3 and lampp
 
-If using custom htdocs folder, you can edit custom_htdocs_directory varible
+If using custom htdocs directory, you can edit custom_htdocs_directory varible
 
 ## How to use?
 
